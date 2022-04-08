@@ -1,0 +1,10 @@
+.HW2 {
+    width: 250px;
+    margin-left: 10px;
+    background-color: rgba(24, 181, 164, 0.5);
+}
+
+p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}

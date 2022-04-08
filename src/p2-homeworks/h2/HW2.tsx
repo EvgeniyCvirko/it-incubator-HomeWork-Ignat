@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
 import Affairs from './Affairs'
+import s from './HW2.module.css'
 
 // types
-export type AffairPriorityType = 'high' | 'low'  |'middle';
+export type AffairPriorityType = 'high' | 'low' | 'middle';
 
 export type AffairType = {
     _id: number,
@@ -20,10 +21,9 @@ const defaultAffairs: Array<AffairType> = [
 ]
 
 export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): Array<AffairType> => {
-        if (filter === 'all') {
+    if (filter === 'all') {
         return affairs
-    }
-    else return affairs.filter((e) => e.priority === filter)
+    } else return affairs.filter((e) => e.priority === filter)
 }
 
 export const deleteAffair = (affairs: AffairType[], _id: number): AffairType[] => {
@@ -39,9 +39,9 @@ function HW2() {
     const deleteAffairCallback = (_id: number) => setAffairs(deleteAffair(affairs, _id))
 
     return (
-        <div>
+        <div className={s.HW2}>
             <hr/>
-            homeworks 2
+            <p>homeworks 2</p>
 
             {/*should work (должно работать)*/}
             <Affairs
