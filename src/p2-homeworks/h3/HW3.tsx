@@ -12,7 +12,6 @@ function HW3() {
     const [users, setUsers] = useState<UserType[]>([
         {_id: v1(), name:''},
     ])
-    console.log(users)
 
     const addUserCallback = (name: string) => {
         let newUser = {_id: v1(), name:name}
