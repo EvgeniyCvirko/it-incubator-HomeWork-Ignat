@@ -1,7 +1,18 @@
 .checkbox {
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    background: #35896848;
+    color: cornflowerblue;
+}
 
+.checkbox:checked {
+    appearance: none;
+    background: url('https://img.icons8.com/fluency/48/000000/instagram-check-mark.png');
+    background-size: contain;
 }
 
 .spanClassName {
-
+    color: cornflowerblue;
 }
