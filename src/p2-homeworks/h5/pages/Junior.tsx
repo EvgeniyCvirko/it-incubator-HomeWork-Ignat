@@ -12,10 +12,3 @@ export function Junior() {
     )
 }
 
-export function Junior_Plus() {
-    return (
-        <div>
-            {/*<HW12/>*/}
-        </div>
-    )
-}

@@ -1,0 +1,8 @@
+.className::before {
+    content: '\270D';
+}
+
+.className{
+    color: darkred;
+    cursor: pointer;
+}
