@@ -22,6 +22,7 @@
     background-color: #3e8e41;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
+
 }
 .default {
     display: inline-block;
@@ -53,10 +54,6 @@
     right: 80px;
     transition: 0.5s;
 }
-
-/*.default:hover {*/
-/*    !*padding-right: 5px;*!*/
-/*}*/
 
 .default:hover:after {
     opacity: 1;
