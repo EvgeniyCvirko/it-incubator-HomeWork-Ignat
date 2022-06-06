@@ -30,9 +30,9 @@ function Clock() {
 
     return (
         <div className='block'>
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}
             <div className='time'
+                onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseLeave}
             >
                 {stringTime}
             </div>
