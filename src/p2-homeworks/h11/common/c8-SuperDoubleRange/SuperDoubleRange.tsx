@@ -1,40 +1,30 @@
 import React, {ChangeEvent} from 'react'
-
+import {Box, Slider} from "@mui/material";
 type SuperDoubleRangePropsType = {
-    onChangeRange?: (value: [number, number]) => void
-    value?: [number, number]
-    value1: number
-    onChangeRangeValue1: (value: number) => void
-    // min, max, step, disable, ...
+    onChangeRange: (value: number[]) => void
+    value2: number[]
+    // onChangeRangeValue1: (value: number) => void
+    //min, max, step, disable, ...
 }
 
 const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
     {
-        onChangeRange, value,value1, onChangeRangeValue1
-        // min, max, step, disable, ...
+          onChangeRange,value2,
+       // min, max, step, disable, ...
     }
 ) => {
-        const onChangeCallback = (e:ChangeEvent<HTMLInputElement>) => {
-            onChangeRangeValue1(+e.currentTarget.value)
-        }
+
+    const handleChange = (event: Event, newValue: number | number[]) => {
+        onChangeRange(newValue as number[]);
+    };
     return (
         <>
-            <input
-                type={'range'}
-                value={value1.toString()}
-                onChange={onChangeCallback}
-                // className={finalRangeClassName}
-                defaultValue='0'
-
-            />
-            <input
-                type={'range'}
-                // onChange={onChangeCallback}
-                // className={finalRangeClassName}
-                defaultValue='0'
-
-            />
-            DoubleRange
+            <Box sx={{ width: 200 }}
+            ><Slider
+                value={value2}
+                onChange={handleChange}
+                valueLabelDisplay="auto"
+            /></Box>
         </>
     )
 }
