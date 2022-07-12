@@ -1,16 +1,13 @@
-import React, {ChangeEvent} from 'react'
+import React from 'react'
 import {Box, Slider} from "@mui/material";
 type SuperDoubleRangePropsType = {
     onChangeRange: (value: number[]) => void
-    value2: number[]
-    // onChangeRangeValue1: (value: number) => void
-    //min, max, step, disable, ...
+    value: number[]
 }
 
 const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
     {
-          onChangeRange,value2,
-       // min, max, step, disable, ...
+          onChangeRange,value
     }
 ) => {
 
@@ -19,12 +16,15 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
     };
     return (
         <>
-            <Box sx={{ width: 200 }}
-            ><Slider
-                value={value2}
+            <Box sx={{ width: 300, display: "inline-flex", marginLeft: 2}}
+            ><div>{value[0]}</div>
+                <Slider
+                    size={"small"}
+                value={value}
                 onChange={handleChange}
-                valueLabelDisplay="auto"
-            /></Box>
+            />
+                <div style={{marginLeft: 45}}>{value[1]}</div>
+            </Box>
         </>
     )
 }
