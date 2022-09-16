@@ -42,16 +42,12 @@ function HW2() {
         <div className={s.HW2}>
             <hr/>
             <p>homeworks 2</p>
-
-            {/*should work (должно работать)*/}
             <Affairs
                 data={filteredAffairs}
                 setFilter={setFilter}
                 deleteAffairCallback={deleteAffairCallback}
             />
-
             <hr/>
-            {/*для личного творчества, могу проверить*/}
             {/*<AlternativeAffairs/>*/}
             <hr/>
         </div>
